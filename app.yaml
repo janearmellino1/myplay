@@ -5,3 +5,11 @@ threadsafe: true
 handlers:
 - url: /.*
   script: helloworld.py
+
+# [START libraries]
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+# [END libraries]
