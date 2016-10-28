@@ -1,4 +1,3 @@
-application: helloworld
 version: 1
 runtime: python27
 api_version: 1
@@ -6,4 +5,4 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: gcloud config set project hellothereworld2-147517
+  script: helloworld.py
