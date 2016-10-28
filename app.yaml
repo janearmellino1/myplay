@@ -6,4 +6,4 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: helloworld.application
+  script: gcloud config set project hellothereworld2-147517
