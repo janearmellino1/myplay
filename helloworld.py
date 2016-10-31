@@ -20,6 +20,17 @@ from google.appengine.ext import db
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
+class MainHandler(webapp2.RequestHandler):
+    def get(self):	
+    	try:
+            # a simple template
+            template = "<html><body><h1>Hello {who}!</h1></body></html>"
+            print(template.format(who="Reader"))
+            
+        except oauth.OAuthRequestError, e:
+        	self.redirect('/msg=You must allow this System Google Contact Access to use it')
+       		
+            
 #print 'Content-Type: text/plain'
 #print ''
 #print 'Hello there world, Happy Friday!'
@@ -30,14 +41,14 @@ jinja_environment = jinja2.Environment(
 #template = "<html><body><h1>Hello {who}!</h1></body></html>"
 #print(template.format(who="Reader"))
 
-f = open('helloworld.html','w')
+#f = open('helloworld.html','w')
 
-message = """<html>
-<head></head>
-<body><p>Hello World - happy Sunday!</p></body>
-</html>"""
+#message = """<html>
+#<head></head>
+#<body><p>Hello World - happy Sunday!</p></body>
+#</html>"""
 
-f.write(message)
-f.close()
+#f.write(message)
+#f.close()
 
-webbrowser.open_new_tab( )
+#webbrowser.open_new_tab( )
