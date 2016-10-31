@@ -16,6 +16,7 @@ calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hc
 
 template_values = {
    				'cals' :  calendars,
+            'myheader' : "Hey there world",
    				}
 
 # a simple template
