@@ -8,6 +8,6 @@ jinja_environment = jinja2.Environment(
 # a simple template
 #template = "<html><body><h1>Hello {who}!</h1></body></html>"
 
-template = jinja_environment.get_template('index.html')
+template = jinja_environment.get_template('play.html')
 #  				self.response.out.write(template.render(template_values))
 print(template.render())
