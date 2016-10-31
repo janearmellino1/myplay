@@ -4,16 +4,20 @@
 
 # write-html-2-windows.py
 
-import webbrowser
+# a simple template
+template = "<html><body><h1>Hello {who}!</h1></body></html>"
+print(template.format(who="Reader"))
 
-f = open('helloworld.html','w')
+#import webbrowser
 
-message = """<html>
-<head></head>
-<body><p>Hello World - happy Sunday!</p></body>
-</html>"""
+#f = open('helloworld.html','w')
 
-f.write(message)
-f.close()
+#message = """<html>
+#<head></head>
+#<body><p>Hello World - happy Sunday!</p></body>
+#</html>"""
 
-webbrowser.open_new_tab('helloworld.html')
+#f.write(message)
+#f.close()
+
+#webbrowser.open_new_tab('helloworld.html')
