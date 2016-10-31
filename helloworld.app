@@ -52,3 +52,7 @@ class MainHandler(webapp2.RequestHandler):
 #f.close()
 
 #webbrowser.open_new_tab( )
+
+app = webapp2.WSGIApplication([
+    ('/', MainHandler)
+], debug=True)
