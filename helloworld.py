@@ -23,4 +23,4 @@ template_values = {
 
 template = jinja_environment.get_template('play.html')
 #  				self.response.out.write(template.render(template_values))
-print(template.render())
+print(template.render(template_values))
