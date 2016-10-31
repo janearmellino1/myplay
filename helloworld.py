@@ -30,14 +30,14 @@ jinja_environment = jinja2.Environment(
 #template = "<html><body><h1>Hello {who}!</h1></body></html>"
 #print(template.format(who="Reader"))
 
-f = open('helloworld.html','w')
+#f = open('helloworld.html','w')
 
-message = """<html>
+message = "<html>
 <head></head>
 <body><p>Hello World - happy Sunday!</p></body>
-</html>"""
+</html>"
 
 #f.write(message)
 #f.close()
 
-#webbrowser.open_new_tab('helloworld.html')
+webbrowser.open_new_tab(message)
