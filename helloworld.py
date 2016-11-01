@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @janearmellino1
- Watch 0
-  Star 0
-  Fork 0 janearmellino1/hello-world
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Tree: 31e0034e87 Find file Copy pathhello-world/helloworld.py
-31e0034  a day ago
-@janearmellino1 janearmellino1 Update helloworld.py
-1 contributor
-RawBlameHistory     
-31 lines (24 sloc)  963 Bytes
 import cgi
 import datetime
 import time
