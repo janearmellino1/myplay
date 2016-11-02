@@ -6,10 +6,20 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>
-            <head><title>Enter the student ID of the student you want assignment calendars for:</title></head>
+          <style>
+            label {
+                display: inline-block;;
+                text-align: Center;
+                width: 250px;
+            }
+            </style>
+            <head><title>HW ID Entry</title></head>
             <body>
               <form action="/assigninfo" method="post">
-                <input type="text" name="std_id"><br>
+                  <div>
+                  <label name="username1">Please enter the student ID of the student you want an assignment calendar for</label>
+                  <input type="text" name="std_id"><br>
+                  </div>    
                 <input type="submit" value="Sign In">
               </form>
             </body>
