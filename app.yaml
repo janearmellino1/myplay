@@ -1,15 +1,9 @@
+application: myplay
+version: 1
 runtime: python27
 api_version: 1
-threadsafe: true
-
+threadsafe: false
 handlers:
 - url: /.*
-  script: myplay.app
+  script: myplay.my_app
 
-# [START libraries]
-libraries:
-- name: webapp2
-  version: latest
-- name: jinja2
-  version: latest
-# [END libraries]
