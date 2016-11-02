@@ -6,19 +6,19 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>
-            <head><title>Enter your name...</title></head>
+            <head><title>Enter the student ID of the student you want assignment calendars for:</title></head>
             <body>
-              <form action="/welcome" method="post">
-                <input type="text" name="my_name"><br>
+              <form action="/assigninfo" method="post">
+                <input type="text" name="std_id"><br>
                 <input type="submit" value="Sign In">
               </form>
             </body>
             </html>""")
 
 
-class Greeting(webapp2.RequestHandler):
+class Calendars(webapp2.RequestHandler):
     def post(self):
-        username = self.request.get("my_name")
+        username = self.request.get("std_id")
         welcome_string = """<html><body>
                           Hi there, {}!
                           </body></html>""".format(username)
@@ -26,5 +26,5 @@ class Greeting(webapp2.RequestHandler):
         self.response.write(welcome_string)
 
 
-routes = [('/', MainPage), ('/welcome', Greeting)]
+routes = [('/', MainPage), ('/assigninfo', Calendars)]
 my_app = webapp2.WSGIApplication(routes, debug=True)
