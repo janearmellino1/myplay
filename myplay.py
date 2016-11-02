@@ -47,7 +47,7 @@ class Calendars(webapp2.RequestHandler):
 #                'myheader' : user,
 #   		}
 
-        template = jinja_environment.get_template('myplayV2.html')
+        template = jinja_environment.get_template('play2.html')
         self.response.write(template.render())
 #       print(template.render(template_values))
 
