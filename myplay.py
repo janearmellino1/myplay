@@ -37,7 +37,7 @@ class Calendars(webapp2.RequestHandler):
         user = self.request.get("std_id")
         welcome_string = """<html><body>
                           Hi there, {}!
-                         </body></html>""".format(username)
+                         </body></html>""".format(user)
         self.response.headers["Content-Type"] = "text/html"
         self.response.write(welcome_string)
 #        calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF
