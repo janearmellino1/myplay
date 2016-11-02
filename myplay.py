@@ -1,15 +1,6 @@
-#!/usr/bin/env python
-import cgi
-import datetime
-import time
-import sys
-import urllib
 import webapp2
 import jinja2
 import os
-from array import *
-from datetime import *
-from time import *
 
 from google.appengine.api import users
 from google.appengine.api import urlfetch
