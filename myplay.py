@@ -49,12 +49,9 @@ class Calendars(webapp2.RequestHandler):
                 'myheader' : user,
    				}
 
-# a simple template
-#template = "<html><body><h1>Hello {who}!</h1></body></html>"
-
         template = jinja_environment.get_template('play.html')
-#  				self.response.out.write(template.render(template_values))
-        print(template.render(template_values))
+  		self.response.write(template.render(template_values))
+#       print(template.render(template_values))
 
 
 routes = [('/', MainPage), ('/assigninfo', Calendars)]
