@@ -4,7 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: myplay.py
+  script: myplay.app
 
 # [START libraries]
 libraries:
