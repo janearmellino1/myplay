@@ -35,7 +35,7 @@ class MainPage(webapp2.RequestHandler):
 
 class Calendars(webapp2.RequestHandler):
     def post(self):
-#        username = self.request.get("std_id")
+        user = self.request.get("std_id")
 #        welcome_string = """<html><body>
 #                          Hi there, {}!
 #                         </body></html>""".format(username)
@@ -44,7 +44,7 @@ class Calendars(webapp2.RequestHandler):
         calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF
             &amp;src=hcrhs.org_classroom284e9a5f%40group.calendar.google.com&ctz=America/New_York&amp;showTitle=0&amp;color=%23A32929"""
         template_values = {
-   				    'cals' :  calendars,
+   				'cals' :  calendars,
                 'myheader' : user,
    		}
 
