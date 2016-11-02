@@ -1,4 +1,3 @@
-import cgi
 import datetime
 import time
 import sys
