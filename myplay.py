@@ -48,8 +48,8 @@ class Calendars(webapp2.RequestHandler):
 #                'myheader' : user,
 #   		}
 
-        template = jinja_environment.get_template('play.html')
-        self.response.write(template.render(template_values))
+        template = jinja_environment.get_template('myplayV2.html')
+        self.response.write(template.render())
 #       print(template.render(template_values))
 
 
