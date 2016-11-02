@@ -16,7 +16,7 @@ from google.appengine.api import urlfetch
 from google.appengine.api import oauth
 from google.appengine.ext import db
 
-jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
+#jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 
 class MainPage(webapp2.RequestHandler):
