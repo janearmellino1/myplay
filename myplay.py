@@ -25,3 +25,9 @@ class MainPage(webapp2.RequestHandler):
 
         self.response.write(
             '<html><body>{}</body></html>'.format(greeting))
+        
+        # [START app]
+        app = webapp2.WSGIApplication([
+        ('/', MainPage),
+        ], debug=True)
+# [END app]
