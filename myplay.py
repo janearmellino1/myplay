@@ -12,7 +12,7 @@ jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class MainPage(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
         #user = users.get_current_user()
         #if user:
         #    nickname = user.nickname()
