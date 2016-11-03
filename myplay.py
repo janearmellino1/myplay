@@ -38,7 +38,7 @@ class MainPage(webapp2.RequestHandler):
 
 class Calendars(webapp2.RequestHandler):
     def post(self):
-#        user = self.request.get("std_id")
+        user = self.request.get("std_id")
 #        welcome_string = """<html><body>
 #                          Hi there, {}!
 #                         </body></html>""".format(user)
