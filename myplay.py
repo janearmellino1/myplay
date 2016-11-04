@@ -13,27 +13,12 @@ jinja_environment = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers["Content-Type"] = "text/html"
-        self.response.write("""
-          <html>
-          <style>
-            label {
-                display: inline-block;;
-                text-align: Center;
-                width: 250px;
-            }
-            </style>
-            <head><title>HW ID Entry</title></head>
-            <body>
-              <form action="/assigninfo" method="post">
-                  <div>
-                  <label name="username1">Please enter the ID of the student you want an assignment calendar for</label>
-                  <input type="text" name="std_id"><br>
-                  </div>    
-                <input type="submit" value="Sign In">
-              </form>
-            </body>
-            </html>""")
+#        self.response.headers["Content-Type"] = "text/html"
+#        self.response.write("""
+         template = jinja_environment.get_template('play2.html')
+         self.response.write(template.render())
+
+#            </html>""")
 
         
 
