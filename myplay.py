@@ -27,7 +27,7 @@ class MainPage(webapp2.RequestHandler):
             <body>
               <form action="/assigninfo" method="post">
                   <div>
-                  <label name="username1">Please enter the student ID of the student you want an assignment calendar for</label>
+                  <label name="username1">Please enter the ID of the student you want an assignment calendar for</label>
                   <input type="text" name="std_id"><br>
                   </div>    
                 <input type="submit" value="Sign In">
