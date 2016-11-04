@@ -13,12 +13,9 @@ jinja_environment = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-#        self.response.headers["Content-Type"] = "text/html"
-#        self.response.write("""
          template = jinja_environment.get_template('play2.html')
          self.response.write(template.render())
 
-#            </html>""")
 
         
 
