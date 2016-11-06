@@ -8,7 +8,7 @@ import os
 #from google.appengine.api import users
 #from google.appengine.api import urlfetch
 #from google.appengine.api import oauth
-#from google.appengine.ext import db
+from google.appengine.ext import db
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
