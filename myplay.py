@@ -1,4 +1,6 @@
 #import cgi
+import datetime
+import time
 import webapp2
 import jinja2
 import os
@@ -38,9 +40,10 @@ class Calendars(webapp2.RequestHandler):
     def post(self):
         user = self.request.get("std_id")
         calendars = formatCals(user)
+	timeraw = datetime.now()
         template_values = {
                 'cals' :  calendars,
-                'myheader' : user,
+                'myheader' : timeraw,
  		}
 
         template = jinja_environment.get_template('play.html')
