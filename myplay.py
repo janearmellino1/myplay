@@ -16,9 +16,9 @@ class studentCalendars(db.Model):
 	std_id = db.StringProperty()
 	firstname = db.StringProperty()
 	lastname = db.StringProperty()
-    course_and_section = db.StringProperty()
-    course_title = db.StringProperty()
-    calendar = db.StringProperty()
+    	course_and_section = db.StringProperty()
+    	course_title = db.StringProperty()
+	calendar = db.StringProperty()
 	date = db.DateProperty(auto_now_add=True)
 
 def formatCals(id):
