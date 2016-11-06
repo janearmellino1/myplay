@@ -11,6 +11,16 @@ import os
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
+class studentCalendars(db.Model):
+	# Create student calendar lookup database
+	std_id = db.StringProperty()
+	firstname = db.StringProperty()
+	lastname = db.StringProperty()
+    course_and_section = db.StringProperty()
+    course_title = db.StringProperty()
+    calendar = db.StringProperty()
+	date = db.DateProperty(auto_now_add=True)
+
 def formatCals(id):
     cals="""https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF
             &amp;src=hcrhs.org_classroom284e9a5f%40group.calendar.google.com&ctz=America/New_York&amp;showTitle=0&amp;color=%23A32929"""
