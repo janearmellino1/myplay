@@ -34,12 +34,7 @@ def formatCals(id):
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-	newEntry = studentCalendars()
-	 	newEntry.std_id = "107001"
-		newEntry.firstname = "Christine"
-		newEntry.lastname = "Armellino"
-		newEntry.course_and_section = "law-03"
-	newEntry.put()
+
 	
          template = jinja_environment.get_template('play2.html')
          self.response.write(template.render())
@@ -48,6 +43,14 @@ class MainPage(webapp2.RequestHandler):
 class Calendars(webapp2.RequestHandler):
     def post(self):
         user = self.request.get("std_id")
+	
+	newEntry = studentCalendars()
+	 	newEntry.std_id = "107001"
+		newEntry.firstname = "Christine"
+		newEntry.lastname = "Armellino"
+		newEntry.course_and_section = "law-03"
+	newEntry.put()
+	
         calendars = formatCals(user)
 	#calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF&amp;src=hcrhs.org_classroom284e9a5f%40group.calendar.google.com&ctz=America/New_York&amp;showTitle=0&amp;color=%23A32929"""
 	#timeraw = datetime.datetime.now(tz=pytz.est)
