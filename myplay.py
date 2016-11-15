@@ -34,6 +34,13 @@ def formatCals(id):
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+	newEntry = studentCalendars()
+	 	newEntry.std_id = "107001"
+		newEntry.firstname = "Christine"
+		newEntry.lastname = "Armellino"
+		newEntry.course_and_section = "law-03"
+	newEntry.put()
+	
          template = jinja_environment.get_template('play2.html')
          self.response.write(template.render())
         
