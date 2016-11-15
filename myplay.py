@@ -43,7 +43,7 @@ class Calendars(webapp2.RequestHandler):
     def post(self):
         user = self.request.get("std_id")
         calendars = formatCals(user)
-	//timeraw = datetime.datetime.now(tz=pytz.est)
+	#timeraw = datetime.datetime.now(tz=pytz.est)
         template_values = {
                 'cals' :  calendars,
                 'myheader' : user,
