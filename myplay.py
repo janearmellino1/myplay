@@ -43,9 +43,7 @@ class Calendars(webapp2.RequestHandler):
     def post(self):
         user = self.request.get("std_id")
         #calendars = formatCals(user)
-	calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40
-	    group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF&amp;src=hcrhs.org_classroom284e9a5f%40
-	    group.calendar.google.com&ctz=America/New_York&amp;showTitle=0&amp;color=%23A32929"""
+	calendars = """https://calendar.google.com/calendar/embed?showTitle=0&amp;src=hcrhs.org_classroom4f06a38d%40group.calendar.google.com&ctz=America/New_York&amp;color=%230099FF&amp;src=hcrhs.org_classroom284e9a5f%40group.calendar.google.com&ctz=America/New_York&amp;showTitle=0&amp;color=%23A32929"""
 	#timeraw = datetime.datetime.now(tz=pytz.est)
         template_values = {
                 'cals' :  calendars,
