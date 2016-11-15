@@ -43,10 +43,10 @@ class Calendars(webapp2.RequestHandler):
     def post(self):
         user = self.request.get("std_id")
         calendars = formatCals(user)
-	timeraw = datetime.datetime.now(tz=pytz.est)
+	//timeraw = datetime.datetime.now(tz=pytz.est)
         template_values = {
                 'cals' :  calendars,
-                'myheader' : timeraw,
+                'myheader' : user,
  		}
 
         template = jinja_environment.get_template('play.html')
