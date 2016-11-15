@@ -34,7 +34,6 @@ def formatCals(id):
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-
 	
          template = jinja_environment.get_template('play2.html')
          self.response.write(template.render())
@@ -45,10 +44,10 @@ class Calendars(webapp2.RequestHandler):
         user = self.request.get("std_id")
 	
 	newEntry = studentCalendars()
-	 	newEntry.std_id = "107001"
-		newEntry.firstname = "Christine"
-		newEntry.lastname = "Armellino"
-		newEntry.course_and_section = "law-03"
+	newEntry.std_id = "107001"
+	newEntry.firstname = "Christine"
+	newEntry.lastname = "Armellino"
+	newEntry.course_and_section = "law-03"
 	newEntry.put()
 	
         calendars = formatCals(user)
